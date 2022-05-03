@@ -47,11 +47,11 @@ switch ($_GET["op"]){
 				$clavehash=hash("SHA256",$clave);
 
 				if (empty($idusuario)){
-					$rspta=$usuario->insertar($nombre,$num_documento,$cargo,$login,$clavehash,$imagen,$_POST['permiso']);
+					$rspta=$usuario->insertar($nombre,$num_documento,$cargo,$login,$clavehash,$imagen);
 					echo $rspta ? "Usuario registrado" : "No se pudieron registrar todos los datos del usuario";
 				}
 				else {
-					$rspta=$usuario->editar($idusuario,$nombre,$num_documento,$cargo,$login,$clavehash,$imagen,$_POST['permiso']);
+					$rspta=$usuario->editar($idusuario,$nombre,$num_documento,$cargo,$login,$clavehash,$imagen);
 					echo $rspta ? "Usuario actualizado" : "Usuario no se pudo actualizar";
 				}
 			//Fin de las validaciones de acceso
