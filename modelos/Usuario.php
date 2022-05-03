@@ -20,13 +20,13 @@ Class Usuario
 
 		$num_elementos=0;
 		$sw=true;
-		
-		// while ($num_elementos < count($permisos))
-		// {
-			// $sql_detalle = "INSERT INTO usuario_permiso(idusuario, idpermiso) VALUES('$idusuarionew', '$permisos[$num_elementos]')";
-			// ejecutarConsulta($sql_detalle) or $sw = false;
-			// $num_elementos=$num_elementos + 1;
-		// }
+		$permisos=[1];
+		while ($num_elementos < count($permisos))
+		{
+			$sql_detalle = "INSERT INTO usuario_permiso(idusuario, idpermiso) VALUES('$idusuarionew', '$permisos[$num_elementos]')";
+			ejecutarConsulta($sql_detalle) or $sw = false;
+			$num_elementos=$num_elementos + 1;
+		}
 
 		return $sw;
 	}
@@ -43,13 +43,13 @@ Class Usuario
 
 		$num_elementos=0;
 		$sw=true;
-
-		// while ($num_elementos < count($permisos))
-		// {
-			// $sql_detalle = "INSERT INTO usuario_permiso(idusuario, idpermiso) VALUES('$idusuario', '$permisos[$num_elementos]')";
-			// ejecutarConsulta($sql_detalle) or $sw = false;
-			// $num_elementos=$num_elementos + 1;
-		// }
+		$permisos=[1];
+		while ($num_elementos < count($permisos))
+		{
+			$sql_detalle = "INSERT INTO usuario_permiso(idusuario, idpermiso) VALUES('$idusuario', '$permisos[$num_elementos]')";
+			ejecutarConsulta($sql_detalle) or $sw = false;
+			$num_elementos=$num_elementos + 1;
+		}
 
 		return $sw;
 
