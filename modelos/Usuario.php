@@ -11,28 +11,28 @@ Class Usuario
 	}
 
 	//Implementamos un método para insertar registros
-	public function insertar($nombre,$num_documento,$cargo,$login,$clave,$imagen,$permisos)
+	public function insertar($nombre,$num_documento,$cargo,$login,$clave,$imagen)
 	{
-		$sql="INSERT INTO usuario (nombre,num_documento,cargo,login,clave,imagen,condicion)
-		VALUES ('$nombre','$num_documento','$cargo','$login','$clave','$imagen','1')";
+		$sql="INSERT INTO usuario (nombre,num_documento,cargo,login,clave,imagen)
+		VALUES ('$nombre','$num_documento','$cargo','$login','$clave','$imagen')";
 		//return ejecutarConsulta($sql);
 		$idusuarionew=ejecutarConsulta_retornarID($sql);
 
 		$num_elementos=0;
 		$sw=true;
-
-		while ($num_elementos < count($permisos))
-		{
-			$sql_detalle = "INSERT INTO usuario_permiso(idusuario, idpermiso) VALUES('$idusuarionew', '$permisos[$num_elementos]')";
-			ejecutarConsulta($sql_detalle) or $sw = false;
-			$num_elementos=$num_elementos + 1;
-		}
+		
+		// while ($num_elementos < count($permisos))
+		// {
+			// $sql_detalle = "INSERT INTO usuario_permiso(idusuario, idpermiso) VALUES('$idusuarionew', '$permisos[$num_elementos]')";
+			// ejecutarConsulta($sql_detalle) or $sw = false;
+			// $num_elementos=$num_elementos + 1;
+		// }
 
 		return $sw;
 	}
 
 	//Implementamos un método para editar registros
-	public function editar($idusuario,$nombre,$num_documento,$cargo,$login,$clave,$imagen,$permisos)
+	public function editar($idusuario,$nombre,$num_documento,$cargo,$login,$clave,$imagen)
 	{
 		$sql="UPDATE usuario SET nombre='$nombre',num_documento='$num_documento',cargo='$cargo',login='$login',clave='$clave',imagen='$imagen' WHERE idusuario='$idusuario'";
 		ejecutarConsulta($sql);
@@ -44,12 +44,12 @@ Class Usuario
 		$num_elementos=0;
 		$sw=true;
 
-		while ($num_elementos < count($permisos))
-		{
-			$sql_detalle = "INSERT INTO usuario_permiso(idusuario, idpermiso) VALUES('$idusuario', '$permisos[$num_elementos]')";
-			ejecutarConsulta($sql_detalle) or $sw = false;
-			$num_elementos=$num_elementos + 1;
-		}
+		// while ($num_elementos < count($permisos))
+		// {
+			// $sql_detalle = "INSERT INTO usuario_permiso(idusuario, idpermiso) VALUES('$idusuario', '$permisos[$num_elementos]')";
+			// ejecutarConsulta($sql_detalle) or $sw = false;
+			// $num_elementos=$num_elementos + 1;
+		// }
 
 		return $sw;
 
