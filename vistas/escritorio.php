@@ -19,6 +19,14 @@ require 'header.php';
   $total_personal=$regc->totalp;
  */
 ?>
+<!DOCTYPE html>
+<html >
+<head>
+  <title></title>
+  
+</head>
+<body class="body">
+ 
 <!--Contenido-->
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">        
@@ -27,17 +35,54 @@ require 'header.php';
             <div class="row">
               <div class="col-md-12">
                   <div class="box">
-                    <div class="box-header with-border">
-                          <h1 class="box-title">Escritorio </h1>
-                        <div class="box-tools pull-right">
-                        </div>
+                    <div class="box-header with-border"  style="background: #99CCFF">
+                      <center>
+                         <h1 >BIENVENIDO AL SISTEMA DE  TRANSPORTE MIXTO TRICOLOR</h1>
+                      </center>                    
+                     
                     </div>
                     <!-- /.box-header -->
                     <!-- centro -->
-                    <div class="panel-body">
-                        <h1>BIENVENIDO A LA PAGINA PRINCIPAL</h1>
+                    <div style="background-image: url('img/2.jpg'); 
+      
+      opacity: 0.6; font-family:Georgia " >
+                      <div class="panel-body" >
+                      <center><h1>Nuestra misión</h1></center>
+                          <p>                          
+ Ser la mejor empresa de servicio del mundo. Para lograrlo, hemos establecido una cultura que apoya a los miembros de nuestro equipo para que ellos puedan dar un servicio excepcional a nuestros clientes. “A los clientes no les gustará una empresa si no les gusta primero a sus empleados”.
+                          </p>
                     </div>
-                
+                    <div class="panel-body">
+                      <center><h1>  Nuestra visión</h1></center>
+                          <p>
+                          
+
+Nuestra vision son los siguientes aspectos:
+<h5>1. Trabajamos para el cliente.</h5>
+
+<h5>2. Trabajamos para ser muy transparentes.</h5>
+<h5>3. Favorecemos la autonomía y la responsabilidad.</h5>
+
+
+<h5>4. Creemos que nuestra mejor ventaja son los compañeros increíbles.</h5>
+                          </p>
+                    </div>
+                        <div class="panel-body">
+                          <center><h1> Nuestros valores</h1></center>
+                          <p>
+                           <H5>1.Honestidad</H5>
+                           <h5>2. Transparencia</h5>
+                           <h5>3. Pasión</h5>
+                           <h5>4. Calidad</h5>
+                           <h5>5. Orientación al cliente</h5>
+                           <h5>6. Responsabilidad social</h5>
+                           <h5></h5>
+                           <h5></h5>
+                           <h5></h5>
+
+                          </p>
+                    </div>
+                    </div>
                     <!--Fin centro -->
                   </div><!-- /.box -->
               </div><!-- /.col -->
@@ -46,6 +91,8 @@ require 'header.php';
 
     </div><!-- /.content-wrapper -->
   <!--Fin-Contenido-->
+</body>
+</html>
 <?php
 
 
@@ -59,5 +106,4 @@ require 'footer.php';
 }
 ob_end_flush();
 ?>
-
 
